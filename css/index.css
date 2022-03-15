@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    padding: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(167, 255, 214);
+    border: 2px solid green;
+    border-radius: 2%;
+}
+.container > div{
+    flex: 1 1 60%;
+    margin: 5px;
+    padding: 5px;
+}
+/*add*/
+.container h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: green;
+}
+.container .add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .add__input{
+    width: 95%;
+    padding: 2px 5px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid black;
+    font-size: 1.2rem;
+}
+.container .add__input:focus{
+    outline: none;
+}
+.container .add .add__icon{
+    display: flex;
+    justify-content: right;
+    width: 5%;
+    padding-left: 10px;
+}
+.container .add .add__icon i{
+    color: rgb(0, 78, 0);
+    font-size: 23px;
+}
+.container .add .add__icon i:hover{
+    cursor: pointer;
+    color: rgb(0, 141, 0);
+}
+/*wait*/
+.container .wait{
+    border: 2px solid green;
+    border-radius: 2%;
+}
+.container .wait h3{
+    padding-bottom: 5px;
+    color: green;
+}
+.container .wait .wait__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: rgb(204, 255, 227);
+    border-radius: 5%;
+    box-shadow: 1px 1px 1px rgb(70, 70, 70);
+}
+.container .wait .wait__item .wait__item__text{
+    padding-left: 10px;
+    color: rgb(0, 78, 0);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.container .wait .wait__item .wait__icons{
+    display: flex;
+    padding-right: 10px;
+}
+.container .wait .wait__item .wait__icons i{
+    margin: 5px;
+    color: rgb(0, 78, 0);
+    font-size: 23px;
+}
+.container .wait .wait__item .wait__icons i:hover{
+    cursor: pointer;
+    color: rgb(0, 141, 0);
+}
+/*done*/
+.container .done{
+    border: 2px solid green;
+    border-radius: 2%;
+}
+.container .done h3{
+    padding-bottom: 5px;
+    color: green;
+}
+.container .done .done__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: rgb(204, 255, 227);
+    border-radius: 5%;
+    box-shadow: 1px 1px 1px rgb(70, 70, 70);
+}
+.container .done .done__item .done__item__text{
+    padding-left: 10px;
+    color: rgb(0, 78, 0);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.container .done .done__item .done__icons{
+    display: flex;
+    padding-right: 10px;
+}
+.container .done .done__item .done__icons i{
+    margin: 5px;
+    color: rgb(0, 78, 0);
+    font-size: 23px;
+}
+.container .done .done__item .done__icons i:hover{
+    cursor: pointer;
+    color: rgb(0, 141, 0);
+}
