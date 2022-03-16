@@ -11,52 +11,17 @@
 </head>
 <body>
     <div class="container">
-        <div><h1>TO-DO LIST</h1></div>
+        <div><h1>TO-DO List</h1></div>
         <div class="add col">
             <input class="add__input" type="text" placeholder="請輸入代辦項目">
             <div class="add__icon"><i class="fas fa-plus-circle"></i></div>
         </div>
-        <div class="wait col">
-            <div><h3>待辦項目</h2></div>
-            <div class="wait__item">
-                <div class="wait__item__text">
-                    (範例)CSS練習
-                </div>
-                <div class="wait__icons">
-                    <div class="wait__item__icons__modify"><i class="fas fa-pencil-alt"></i></div>
-                    <div class=".wait__item__icons__trash"><i class="fas fa-trash-alt"></i></div>
-                    <div class=".wait__item__icons__done"><i class="far fa-check-circle"></i></i></div>
-                </div>
+        <div class="notes col">
+            <div class="notes__btn">
+                <div class="notes__btn__wait">待辦項目</div>
+                <div class="notes__btn__btn">完成項目</div>
             </div>
-            <div class="wait__item">
-                <div class="wait__item__text">(範例)CSS練習</div>
-                <div class="wait__icons">
-                    <div class="wait__item__icons__modify"><i class="fas fa-pencil-alt"></i></div>
-                    <div class=".wait__item__icons__trash"><i class="fas fa-trash-alt"></i></div>
-                    <div class=".wait__item__icons__done"><i class="far fa-check-circle"></i></i></div>
-                </div>
-            </div>
-        </div>
-        <div class="done col">
-            <div class="done__item__text"><h3>完成項目</h3></div>
-            <div class="done__item">
-                <div class="done__item__text">
-                    (範例)CSS練習
-                </div>
-                <div class="done__icons">
-                    <div class=".done__item__icons__trash"><i class="fas fa-trash-alt"></i></div>
-                    <div class=".done__item__icons__done"><i class="far fa-check-circle"></i></i></div>
-                </div>
-            </div>
-            <div class="done__item">
-                <div class="done__item__text">
-                    (範例)CSS練習
-                </div>
-                <div class="done__icons">
-                    <div class=".done__item__icons__trash"><i class="fas fa-trash-alt"></i></div>
-                    <div class=".done__item__icons__done"><i class="far fa-check-circle"></i></i></div>
-                </div>
-            </div>
+            <div class="notes__itembox"></div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
