@@ -1,8 +1,8 @@
 var addInput = document.getElementsByClassName("add__input")[0];
 var addEvent = document.getElementsByClassName("add__icon")[0];
-var waitTitle = document.getElementsByClassName("wait__btn")[0];
-var doneTitle = document.getElementsByClassName("done__btn")[0];
-var itembox = document.getElementsByClassName("itembox")[0];
+var waitTitle = document.getElementsByClassName("notes__btn__wait")[0];
+var doneTitle = document.getElementsByClassName("notes__btn__btn")[0];
+var itembox = document.getElementsByClassName("notes__itembox")[0];
 var controlModify = true;
 var json = {};
 
@@ -23,13 +23,17 @@ addEvent.onclick = function(){
 }
 
 waitTitle.onclick = function(ev){
-    //清空介面
-    
-    //顯示wait資料
-    if(json["待辦事項"] != undefined){
-        for(i = 0; i < json["待辦事項"].length; i++){
-            console.log(json["待辦事項"][i]);
+    if(controlModify == true){
+        controlModify = false;
+        //清空介面
+        console.log(json["待辦事項"]);
+        //顯示wait資料
+        if(json["待辦事項"] != undefined){
+            for(i = 0; i < json["待辦事項"].length; i++){
+                console.log(json["待辦事項"][i]);
+            }
         }
+        controlModify = true;
     }
 }
 
@@ -71,12 +75,12 @@ function additemboxItem(content){
     var itemboxItemIconsTrash = document.createElement("div");
     var itemboxItemIconsDone = document.createElement("div");
     //新增class
-    itemboxItem.className = "itembox__item";
-    itemboxItemText.className = "itembox__item__text";
-    itemboxItemIcons.className = "itembox__item__icons";
-    itemboxItemIconsModify.className = "itembox__item__icons__modify";
-    itemboxItemIconsTrash.className = "itembox__item__icons__trash";
-    itemboxItemIconsDone.className = "itembox__item__icons__done";
+    itemboxItem.className = "notes__itembox__item";
+    itemboxItemText.className = "notes__itembox__item__text";
+    itemboxItemIcons.className = "notes__itembox__item__icons";
+    itemboxItemIconsModify.className = "notes__itembox__item__icons__modify";
+    itemboxItemIconsTrash.className = "notes__itembox__item__icons__trash";
+    itemboxItemIconsDone.className = "notes__itembox__item__icons__done";
     //添加待辦項目
     itemboxItemText.innerHTML = content;
     //添加icon
@@ -95,17 +99,22 @@ function additemboxItem(content){
     itemboxItemIconsModify.onclick = function(ev){
         if(controlModify == true){
             controlModify = false;
+            json["待辦事項"].pop(itemboxItemText.innerHTML);
             var itemboxItemBefore = itemboxItemText.innerHTML;
-            itemboxItemText.innerHTML = '<input class="itembox__item__text__input" type="text">';
-            var itemboxItemTextInput = document.getElementsByClassName("itembox__item__text__input")[0];
+            itemboxItemText.innerHTML = '<input class="notes__itembox__item__text__input" type="text">';
+            var itemboxItemTextInput = document.getElementsByClassName("notes__itembox__item__text__input")[0];
             itemboxItemTextInput.value = itemboxItemBefore;
             itemboxItemTextInput.select(); //將文字反白
             ev = window.event || ev;
             if(ev.stopPropagation()) ev.cancelBubble = true; //阻止冒泡事件
-            document.onclick = function(){
-                itemboxItemText.innerHTML = itemboxItemTextInput.value;
-                controlModify = true;
-            }
+            itemboxItemTextInput.addEventListener('keydown',function(e){
+                if(e.keyCode === 13){
+                    itemboxItemText.innerHTML = itemboxItemTextInput.value;
+                    addWaitJson(itemboxItemTextInput.value);
+                    console.log("通過了");
+                    controlModify = true;
+                }
+            },false);
         }
     }
     //刪除按鈕
