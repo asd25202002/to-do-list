@@ -3,10 +3,5 @@
 
 &emsp;
 &emsp;
-<h1><font face="標楷體">介面預覽</font></h1>
-<img src="https://github.com/asd25202002/to-do-list/blob/main/demo.gif" width="600px" height="600px">
-
-&emsp;
-&emsp;
 <h1><font face="標楷體">作品連結</font></h1>
 <a href="https://asd25202002.github.io/to-do-list/">https://asd25202002.github.io/to-do-list/</a>
