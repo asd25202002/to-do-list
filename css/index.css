@@ -3,19 +3,17 @@
     padding: 0;
 }
 .container{
-    display: flex;
-    flex-wrap: wrap;
     position: relative;
     width: 600px;
+    height: 600px;
     margin: 10px auto 0;
-    padding: 25px;
+    padding: 10px;
     background-color: rgb(167, 255, 214);
     border: 2px solid green;
     border-radius: 2%;
 }
 .container > div{
-    flex: 1 1 60%;
-    margin: 5px;
+    margin: 15px;
     padding: 5px;
 }
 /*add*/
@@ -31,7 +29,7 @@
     align-items: center;
 }
 .container .add__input{
-    width: 95%;
+    width: 90%;
     padding: 2px 5px;
     background-color: transparent;
     border: none;
@@ -57,18 +55,35 @@
 }
 /*notes*/
 .container .notes{
+    width: 90%;
+    height: 60%;
+    margin: 0 auto;
     border: 2px solid green;
     border-radius: 2%;
 }
 .container .notes .notes__btn{
-
+    display: flex;
+    border-bottom: 2px solid green;
 }
 .container .notes .notes__btn div{
+    margin-left: 25px;
     padding-bottom: 5px;
     color: green;
+    text-align: center;
+}
+.container .notes .notes__btn div:hover{
+    cursor: pointer;
+    background-color: green;
+    color: white;
 }
 .container .notes .notes__itembox{
-
+    margin: 10px;
+}
+.container .notes .notes__done{
+    display: none;
+}
+.container .notes .notes__wait:active .notes__done{
+    display: block;
 }
 .container .notes .notes__itembox .notes__itembox__item{
     display: flex;
