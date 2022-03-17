@@ -18,13 +18,21 @@ addEvent.onclick = function(){
 }
 
 notesBtnWait.onclick = function(){
-    notesWait.style.display = "block";
     notesDone.style.display = "none";
+    notesBtnDone.style.background = "transparent"
+    notesBtnDone.style.color = "green";
+    notesWait.style.display = "block";
+    notesBtnWait.style.background = "green";
+    notesBtnWait.style.color = "white";
 }
 
 notesBtnDone.onclick = function(){
-    notesDone.style.display = "block";
     notesWait.style.display = "none";
+    notesBtnWait.style.background = "transparent"
+    notesBtnWait.style.color = "green";
+    notesDone.style.display = "block";
+    notesBtnDone.style.background = "green";
+    notesBtnDone.style.color = "white";
 }
 
 function additemboxItem(content){

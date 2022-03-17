@@ -66,15 +66,17 @@
     border-bottom: 2px solid green;
 }
 .container .notes .notes__btn div{
-    margin-left: 25px;
+    padding: 0 25px;
     padding-bottom: 5px;
     color: green;
     text-align: center;
 }
-.container .notes .notes__btn div:hover{
-    cursor: pointer;
+.container .notes .notes__btn .notes__btn__wait{
     background-color: green;
     color: white;
+}
+.container .notes .notes__btn div:hover{
+    cursor: pointer;
 }
 .container .notes .notes__itembox{
     margin: 10px;
