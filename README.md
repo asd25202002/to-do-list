@@ -4,7 +4,7 @@
 &emsp;
 &emsp;
 <h1><font face="標楷體">作品預覽</font></h1>
-<img src="./show">
+<img src="https://github.com/asd25202002/to-do-list/blob/main/show.png">
 &emsp;
 &emsp;
 <h1><font face="標楷體">作品連結</font></h1>
